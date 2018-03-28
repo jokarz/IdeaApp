@@ -1,6 +1,6 @@
 # Idea CRUD
 
-CRUD demostration
+CRUD demonstration
 
 ### Endpoints
 
