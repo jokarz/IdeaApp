@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IdeaApi.Models;
+﻿using IdeaApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace IdeaApp
 {
@@ -25,6 +19,7 @@ namespace IdeaApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             services.AddMvc();
             services.AddDbContext<IdeaContext>(options => options.UseSqlite("Data Source=Ideas.db"));
         }
@@ -36,7 +31,13 @@ namespace IdeaApp
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            //app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.UseCors(builder =>
+            builder.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials());
             app.UseMvc();
         }
     }

@@ -28,15 +28,21 @@ namespace IdeaApi.Models
                 context.Ideas.AddRange(
                     new Idea
                     {
-                        Name = "Creating food in pill form",
-                        Description = "Imagine being able to consume a pill that is a replacement for a whole meal!",
-                        Status = 0
+                        Name = "Creating a human management system with robots",
+                        Description = "Won't it be good if robots could manage our life?",
+                        Status = -1
                     },
                     new Idea
                     {
                         Name = "Flying skateboard",
                         Description = "It would be awesome. Back to the future anybody?",
                         Status = 0
+                    },
+                    new Idea
+                    {
+                        Name = "Creating food in pill form",
+                        Description = "Imagine being able to consume a pill that is a replacement for a whole meal!",
+                        Status = 1
                     }
                );
                 context.SaveChanges();

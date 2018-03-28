@@ -19,11 +19,10 @@
     "IdeaApp": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://localhost:54895/"
+      "applicationUrl": "http://localhost:9999/"
     }
   }
 }
