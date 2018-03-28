@@ -12,7 +12,7 @@ Update - /api/idea/{id} (HttpPut)
 Delete - /api/idea/{id} (HttpDelete)
 ```
 
-Frontend path for each corresponding CRUD:
+Frontend paths for each corresponding CRUD:
 ```
 Create - /
 Read - /, /idea, /idea/{id}
