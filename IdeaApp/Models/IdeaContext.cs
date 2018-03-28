@@ -35,7 +35,7 @@ namespace IdeaApi.Models
                     new Idea
                     {
                         Name = "Flying skateboard",
-                        Description = "It would be awesome. Back to the future anybody?",
+                        Description = "It would be awesome. Back to the future reference anybody?",
                         Status = 0
                     },
                     new Idea
